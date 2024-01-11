@@ -28,7 +28,9 @@ fetch(countryUrl)
     countries.forEach((country) => {
       // Check if the country is "United States Minor Outlying Islands" and skip processing
       if (country.name === "United States Minor Outlying Islands") {
-        console.warn("Skipping processing for United States Minor Outlying Islands (latlng data not available)");
+        console.warn(
+          "Skipping processing for United States Minor Outlying Islands (latlng data not available)"
+        );
         return;
       }
 
@@ -91,9 +93,6 @@ fetch(countryUrl)
           });
       } else {
         console.error(`Latlng data not available for ${countryName}`);
-
-
-        
       }
     });
   })
